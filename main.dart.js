@@ -388335,7 +388335,7 @@ if(l.k2.length===0){g=l.gaag()
 g=A.p6(l.bCY(),g,B.wC,k,k,!1)}else g=l.ccP()
 f.push(A.w(g,1))
 return A.f(k,A.m(f,B.f,k,B.c,B.d,B.j),B.h,k,k,new A.j(B.o,k,new A.cl(B.C,new A.aC(h,0.8,B.p,-1),B.C,B.C),k,k,k,B.l),k,k,k,k,k,k,k,i)},
-bCY(){var s,r,q,p,o,n,m,l,k,j,i,h=this,g="Contracting",f="Security",e="Allowance",d="Work Breakdown Structure",c="Change Management",b="Interface Management",a="Project Baseline",a0="Level 1 - Project Schedule",a1="Detailed Project Schedule",a2="Condensed Project Summary",a3="Team Management",a4="Update Ops and Maintenance Plans",a5="Gap Analysis and Scope Reconciliation",a6="Punchlist Actions",a7="Salvage and/or Disposal Plan",a8="Engineering",a9="Specialized Design",b0="Technical Development",b1="Project Performance Review",b2="Hypercare & Warranty Support",b3=null,b4="Potential Solutions",b5="Risk Identification",b6="IT Considerations",b7="Infrastructure Considerations",b8="Core Stakeholders",b9="Initial Cost Estimate",c0="Preferred Solution",c1="Preferred Solution Analysis",c2="Project Requirements",c3="Project Opportunities",c4="Procurement",c5="Project Goals & Milestones",c6="Training & Team Building",c7="Team Training and Team Building",c8="Stakeholder Management",c9="Quality Management",d0="Design Specifications",d1="Technology Planning",d2="Agile Delivery Model",d3="Execution Work Packages",d4="Executive Plan Strategy",d5="Execution Plan Details",d6="Execution Early Works",d7="Execution Enabling Work Plan",d8="Execution Issue Management",d9="Execution Stakeholder Identification",e0="Execution Lessons Learned",e1="Execution Interface Management",e2="Execution Interface Management Plan",e3="Execution Interface Management Overview",e4="Contract Planning",e5="Scope Tracking Plan",e6="Issue Management",e7="Lessons Learned",e8="Security Management",e9="Deliverable Roadmap",f0="Roadmap Overview",f1="Design Management",f2="Technical Alignment",f3="Development Set Up",f4="Tools Integration",f5="Long Lead Equipment Ordering",f6="Design Deliverables",f7="Deliverable Status Updates",f8="Recurring Deliverables",f9="Contracts Tracking",g0="Scope Tracking Implementation",g1="Stakeholder Alignment",g2="Launch Checklist",g3="Scope Completion",g4="Identify and Staff Ops Team",g5="Finalize Project",g6="Launch Readiness Assessment",g7=u.E,g8=u.H,g9="Vendor & Contract Closeout",h0="Scope & Deliverable Reconciliation",h1="Financial Closeout",h2="Benefits Realization",h3=u.M,h4="Project Closeout",h5=h.ek(g),h6=h.ek(f),h7=h.ek(e),h8=h.ek(d),h9=h.ek(c),i0=h.ek(b),i1=h.ek(a),i2=h.ek(a0),i3=h.ek(a1),i4=h.ek(a2),i5=h.ek(a3),i6=h.ek("Staff Team"),i7=h.ek(a4),i8=h.ek(a5),i9=h.ek(a6),j0=h.ek(a7),j1=h.ek(a8),j2=h.ek(a9),j3=h.ek(b0),j4=h.ek(b1),j5=h.ek(b2),j6=t.p,j7=A.a([h.bC(B.a_n,"Home",h.a.d==="Home",new A.ekY(h)),h.PI(B.fe,"Initiation Phase",h.d,h.ir(B.aMm),new A.ekZ(h))],j6)
+bCY(){var s,r,q,p,o,n,m,l,k,j,i,h=this,g="Contracting",f="Security",e="Allowance",d="Work Breakdown Structure",c="Change Management",b="Interface Management",a="Project Baseline",a0="Level 1 - Project Schedule",a1="Detailed Project Schedule",a2="Condensed Project Summary",a3="Team Management",a4="Update Ops and Maintenance Plans",a5="Gap Analysis and Scope Reconciliation",a6="Punchlist Actions",a7="Salvage and/or Disposal Plan",a8="Engineering",a9="Specialized Design",b0="Technical Development",b1="Project Performance Review",b2="Hypercare & Warranty Support",b3=null,b4="Potential Solutions",b5="Risk Identification",b6="IT Considerations",b7="Infrastructure Considerations",b8="Core Stakeholders",b9="Initial Cost Estimate",c0="Preferred Solution",c1="Preferred Solution Analysis",c2="Project Requirements",c3="Project Opportunities",c4="Procurement",c5="Project Goals & Milestones",c6="Training & Team Building",c7="Team Training and Team Building",c8="Stakeholder Management",c9="Quality Management",d0="Technology Planning",d1="Design Specifications",d2="Agile Delivery Model",d3="Execution Work Packages",d4="Executive Plan Strategy",d5="Execution Plan Details",d6="Execution Early Works",d7="Execution Enabling Work Plan",d8="Execution Issue Management",d9="Execution Stakeholder Identification",e0="Execution Lessons Learned",e1="Execution Interface Management",e2="Execution Interface Management Plan",e3="Execution Interface Management Overview",e4="Contract Planning",e5="Scope Tracking Plan",e6="Issue Management",e7="Lessons Learned",e8="Security Management",e9="Deliverable Roadmap",f0="Roadmap Overview",f1="Design Management",f2="Technical Alignment",f3="Development Set Up",f4="Tools Integration",f5="Long Lead Equipment Ordering",f6="Design Deliverables",f7="Deliverable Status Updates",f8="Recurring Deliverables",f9="Contracts Tracking",g0="Scope Tracking Implementation",g1="Stakeholder Alignment",g2="Launch Checklist",g3="Scope Completion",g4="Identify and Staff Ops Team",g5="Finalize Project",g6="Launch Readiness Assessment",g7=u.E,g8=u.H,g9="Vendor & Contract Closeout",h0="Scope & Deliverable Reconciliation",h1="Financial Closeout",h2="Benefits Realization",h3=u.M,h4="Project Closeout",h5=h.ek(g),h6=h.ek(f),h7=h.ek(e),h8=h.ek(d),h9=h.ek(c),i0=h.ek(b),i1=h.ek(a),i2=h.ek(a0),i3=h.ek(a1),i4=h.ek(a2),i5=h.ek(a3),i6=h.ek("Staff Team"),i7=h.ek(a4),i8=h.ek(a5),i9=h.ek(a6),j0=h.ek(a7),j1=h.ek(a8),j2=h.ek(a9),j3=h.ek(b0),j4=h.ek(b1),j5=h.ek(b2),j6=t.p,j7=A.a([h.bC(B.a_n,"Home",h.a.d==="Home",new A.ekY(h)),h.PI(B.fe,"Initiation Phase",h.d,h.ir(B.aMm),new A.ekZ(h))],j6)
 if(h.d){s=A.a([h.mz("Business Case",h.e,h.ir(B.aMj),new A.el_(h))],j6)
 if(h.e){r=A.a([h.c3("Scope Statement",h.a.d==="Business Case Detail",h.gaWs()),h.c3(b4,h.a.d===b4,h.gaZL()),h.c3(b5,h.a.d===b5,h.gb_0()),h.c3(b6,h.a.d===b6,h.gaZA()),h.c3(b7,h.a.d===b7,h.gaWt()),h.c3(b8,h.a.d===b8,h.gaZ0()),h.c3(b9,h.a.d===b9,h.gaZ1()),h.mz("Executive Summary",h.gRC(),h.ir(B.aMk),new A.ela(h))],j6)
 if(h.gRC())B.e.q(r,A.a([h.c3(c0,h.a.d===c0,h.gaZN()),h.c3(c1,h.a.d===c1,h.gaZM())],j6))
@@ -388365,10 +388365,10 @@ n=h.c3(c8,h.a.d===c8,h.gb_c())
 m=i5?b3:h.gb_l()
 B.e.q(r,A.a([s,q,p,o,n,h.tz(a3,h.a.d==="Team Management",i5,m)],j6))}r.push(h.eJ("SSHER",h.a.d==="SSHER",h.gb_2()))
 r.push(h.eJ(c9,h.a.d===c9,h.gaZW()))
-r.push(h.mz("Design Planning",h.gR7(),h.ir(B.a5X),new A.elt(h)))
-if(h.gR7())B.e.q(r,A.a([h.c3("Project Overview",h.a.d==="Design Planning - Project Overview",h.gaZg()),h.c3("Design Overview",h.a.d==="Design Planning - Design Overview",h.gaZd()),h.c3(d0,h.a.d==="Design Planning - Design Specifications",h.gaZj()),h.c3("Deviations",h.a.d==="Design Planning - Deviations",h.gaZe()),h.c3("Requirements Mapping",h.a.d==="Design Planning - Requirements Mapping",h.gaZh()),h.c3("Architecture Basis",h.a.d==="Design Planning - Architecture Basis",h.gaZ8()),h.c3("UI/UX Basis",h.a.d==="Design Planning - UI/UX Basis",h.gaZl()),h.c3("Technical Basis",h.a.d==="Design Planning - Technical Basis",h.gaZk()),h.c3("Constraints & Assumptions",h.a.d===u.N,h.gaZ9()),h.c3("Risks & Mitigation",h.a.d==="Design Planning - Risks & Mitigation",h.gaZi()),h.c3("Dependencies",h.a.d==="Design Planning - Dependencies",h.gaZc()),h.c3("Decision Log",h.a.d==="Design Planning - Decision Log",h.gaZa()),h.c3("Validation",h.a.d==="Design Planning - Validation",h.gaZm()),h.c3("Approvals",h.a.d==="Design Planning - Approvals",h.gaZ7()),h.c3("Work Packages",h.a.d==="Design Planning - Work Packages",h.gaZn())],j6))
-r.push(h.mz(d1,h.gY2(),h.ir(B.aMp),new A.elu(h)))
-if(h.gY2())B.e.q(r,A.a([h.c3("Technology Planning Overview",h.a.d===d1,h.gb_r())],j6))
+r.push(h.mz(d0,h.gY2(),h.ir(B.aMp),new A.elt(h)))
+if(h.gY2())B.e.q(r,A.a([h.c3("Technology Planning Overview",h.a.d===d0,h.gb_r())],j6))
+r.push(h.mz("Design Planning",h.gR7(),h.ir(B.a5X),new A.elu(h)))
+if(h.gR7())B.e.q(r,A.a([h.c3("Project Overview",h.a.d==="Design Planning - Project Overview",h.gaZg()),h.c3("Design Overview",h.a.d==="Design Planning - Design Overview",h.gaZd()),h.c3(d1,h.a.d==="Design Planning - Design Specifications",h.gaZj()),h.c3("Deviations",h.a.d==="Design Planning - Deviations",h.gaZe()),h.c3("Requirements Mapping",h.a.d==="Design Planning - Requirements Mapping",h.gaZh()),h.c3("Architecture Basis",h.a.d==="Design Planning - Architecture Basis",h.gaZ8()),h.c3("UI/UX Basis",h.a.d==="Design Planning - UI/UX Basis",h.gaZl()),h.c3("Technical Basis",h.a.d==="Design Planning - Technical Basis",h.gaZk()),h.c3("Constraints & Assumptions",h.a.d===u.N,h.gaZ9()),h.c3("Risks & Mitigation",h.a.d==="Design Planning - Risks & Mitigation",h.gaZi()),h.c3("Dependencies",h.a.d==="Design Planning - Dependencies",h.gaZc()),h.c3("Decision Log",h.a.d==="Design Planning - Decision Log",h.gaZa()),h.c3("Validation",h.a.d==="Design Planning - Validation",h.gaZm()),h.c3("Approvals",h.a.d==="Design Planning - Approvals",h.gaZ7()),h.c3("Work Packages",h.a.d==="Design Planning - Work Packages",h.gaZn())],j6))
 s=i0?b3:h.gaZE()
 r.push(h.o8(b,h.a.d===b,i0,s))
 r.push(h.mz(d2,h.gON(),h.ir(B.aMz),new A.elv(h)))
@@ -388406,7 +388406,7 @@ B.e.q(r,A.a([s,q,p,h.tz(a2,h.a.d==="Project Plan - Condensed Project Summary",i4
 r.push(h.o8(a,h.a.d===a,i1,s))
 B.e.q(j7,r)}j7.push(h.PI(B.ib,"Design Phase",h.gR6(),h.ir(B.aMy),new A.el5(h)))
 if(h.gR6()){s=h.eJ(f1,h.a.d===f1,h.gaZf())
-r=h.eJ(d0,h.a.d===d0,h.gaZZ())
+r=h.eJ(d1,h.a.d===d1,h.gaZZ())
 q=h.eJ(f2,h.a.d===f2,h.gcp5())
 p=h.eJ(f3,h.a.d===f3,h.gaZp())
 o=h.eJ("UI/UX Design",h.a.d==="UI/UX Design",h.gb_u())
@@ -388926,8 +388926,8 @@ return s.k(new A.ekJ(s))},
 $S:0}
 A.ekJ.prototype={
 $0(){var s=this.a
-s.go=!s.gR7()
-$.hJO=s.gR7()},
+s.w=!s.gY2()
+$.hK3=s.gY2()},
 $S:0}
 A.elu.prototype={
 $0(){var s=this.a
@@ -388935,8 +388935,8 @@ return s.k(new A.ekI(s))},
 $S:0}
 A.ekI.prototype={
 $0(){var s=this.a
-s.w=!s.gY2()
-$.hK3=s.gY2()},
+s.go=!s.gR7()
+$.hJO=s.gR7()},
 $S:0}
 A.elv.prototype={
 $0(){var s=this.a
