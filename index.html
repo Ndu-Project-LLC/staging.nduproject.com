@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NDU Project — Staging</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0d9488 100%);
+      color: #f8fafc;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .card {
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      padding: 3rem;
+      max-width: 540px;
+      text-align: center;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(13, 148, 136, 0.2);
+      border: 1px solid rgba(13, 148, 136, 0.4);
+      color: #5eead4;
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #60a5fa, #5eead4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    p {
+      color: #cbd5e1;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    .meta {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.8rem;
+      color: #94a3b8;
+      font-family: 'SF Mono', Monaco, monospace;
+    }
+    .pulse {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: #10b981;
+      border-radius: 50%;
+      margin-right: 0.5rem;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge">Staging Environment</div>
+    <h1>NDU Project</h1>
+    <p>
+      <span class="pulse"></span>
+      This is the <strong>staging.nduproject.com</strong> deployment target.
+    </p>
+    <p>
+      The first production build will be pushed here automatically by the
+      <code>deploy-to-staging-repo.yml</code> workflow in the main
+      <code>Ndu-Project-LLC/NDU-Project</code> repository.
+    </p>
+    <div class="meta">
+      Repo: <code>ndu-staging</code> · Branch: <code>main</code> · Pages: enabled
+    </div>
+  </div>
+</body>
+</html>

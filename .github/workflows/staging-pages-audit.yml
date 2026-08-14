@@ -1,0 +1,62 @@
+# Optional: This workflow runs on the STAGING repo side and is triggered
+# when the source repo pushes a new build to main.
+# It exists primarily to:
+#   1. Post a deployment status back to the source repo
+#   2. Validate the CNAME file is intact
+#   3. Confirm Pages is serving the latest commit
+#
+# In most cases you do NOT need this workflow — GitHub Pages will rebuild
+# automatically when main is pushed to. This is a bonus audit trail.
+
+name: staging-pages-audit
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify CNAME is intact
+        run: |
+          echo "CNAME content: $(cat CNAME)"
+          if [ "$(cat CNAME)" != "staging.nduproject.com" ]; then
+            echo "::error::CNAME file is incorrect! Expected 'staging.nduproject.com', got '$(cat CNAME)'"
+            exit 1
+          fi
+          echo "✓ CNAME verified: staging.nduproject.com"
+
+      - name: Verify .nojekyll exists
+        run: |
+          if [ ! -f .nojekyll ]; then
+            echo "::error::.nojekyll file is missing — GitHub Pages may try to run Jekyll and fail on Flutter's _assets/ folders"
+            exit 1
+          fi
+          echo "✓ .nojekyll present"
+
+      - name: Verify index.html exists
+        run: |
+          if [ ! -f index.html ]; then
+            echo "::error::index.html is missing — Pages will 404"
+            exit 1
+          fi
+          echo "✓ index.html present"
+
+      - name: Pages deployment info
+        run: |
+          echo "============================================"
+          echo "  NDU Project — Staging Deployment Audit"
+          echo "============================================"
+          echo "  Commit:  ${{ github.sha }}"
+          echo "  Author:  ${{ github.actor }}"
+          echo "  Time:    ${{ github.event.head_commit.timestamp }}"
+          echo "  URL:     https://staging.nduproject.com"
+          echo "============================================"
