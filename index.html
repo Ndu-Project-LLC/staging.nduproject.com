@@ -32,14 +32,14 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="NDU Project">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png?v=1786713455">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png?v=1786716591">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico?v=1786713455"/>
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png?v=1786713455"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico?v=1786716591"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png?v=1786716591"/>
 
   <title>NDU Project</title>
-  <link rel="manifest" href="manifest.json?v=1786713455">
+  <link rel="manifest" href="manifest.json?v=1786716591">
 
   <!-- Loading spinner — shown immediately on first paint, before Flutter's
        engine has booted. Provides visual feedback during the ~1-2s it takes
@@ -119,11 +119,11 @@
   <!-- Runtime environment config — loaded BEFORE Flutter so the keys are
        available when EnvConfigLoader.load() runs in main().
        See web/env-config.js for documentation. -->
-  <script src="env-config.js?v=1786713455"></script>
+  <script src="env-config.js?v=1786716591"></script>
 
   <!-- ULTRA AGGRESSIVE cache bust — guarantees users always see the latest
        deployment. The pipeline (scripts/stamp_build_version.py) replaces
-       1786713455 with the current epoch seconds at build time, so this
+       1786716591 with the current epoch seconds at build time, so this
        block effectively re-runs on every new deploy:
 
        1. Kills ALL existing service workers (prevents stale SW from serving
@@ -136,17 +136,17 @@
           bypassing any HTTP cache. -->
   <script>
     (function() {
-      // 1786713455 is replaced at build time by scripts/stamp_build_version.py
+      // 1786716591 is replaced at build time by scripts/stamp_build_version.py
       // with a 10-digit epoch timestamp (e.g. '1786708977').
       //
       // IMPORTANT: We must NOT compare NDU_BUILD against the literal string
-      // '1786713455' to detect the un-stamped source, because the stamp
+      // '1786716591' to detect the un-stamped source, because the stamp
       // script does a naive text.replace() on ALL occurrences — including any
       // literal placeholder in this comparison — which would make the check
       // always-true after stamping and break the cache-busting redirect.
       // Instead, we detect the un-stamped source by checking that the value
       // is a 10-digit epoch timestamp.
-      var NDU_BUILD = '1786713455';
+      var NDU_BUILD = '1786716591';
       if (!NDU_BUILD || !/^\d{10}$/.test(NDU_BUILD)) {
         NDU_BUILD = 'dev-local';
       }
@@ -214,6 +214,6 @@
     For more details:
     * https://docs.flutter.dev/platform-integration/web/initialization
   -->
-  <script src="flutter_bootstrap.js?v=1786713455" async></script>
+  <script src="flutter_bootstrap.js?v=1786716591" async></script>
 </body>
 </html>
