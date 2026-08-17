@@ -32,14 +32,14 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="NDU Project">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png?v=1786950129">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png?v=1786951943">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico?v=1786950129"/>
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png?v=1786950129"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico?v=1786951943"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png?v=1786951943"/>
 
   <title>NDU Project</title>
-  <link rel="manifest" href="manifest.json?v=1786950129">
+  <link rel="manifest" href="manifest.json?v=1786951943">
 
   <!-- Loading spinner — shown immediately on first paint, before Flutter's
        engine has booted. Provides visual feedback during the ~1-2s it takes
@@ -119,11 +119,11 @@
   <!-- Runtime environment config — loaded BEFORE Flutter so the keys are
        available when EnvConfigLoader.load() runs in main().
        See web/env-config.js for documentation. -->
-  <script src="env-config.js?v=1786950129"></script>
+  <script src="env-config.js?v=1786951943"></script>
 
   <!-- ULTRA AGGRESSIVE cache bust — guarantees users always see the latest
        deployment. The pipeline (scripts/stamp_build_version.py) replaces
-       1786950129 with the current epoch seconds at build time, so this
+       1786951943 with the current epoch seconds at build time, so this
        block effectively re-runs on every new deploy:
 
        1. Kills ALL existing service workers (prevents stale SW from serving
@@ -136,17 +136,17 @@
           bypassing any HTTP cache. -->
   <script>
     (function() {
-      // 1786950129 is replaced at build time by scripts/stamp_build_version.py
+      // 1786951943 is replaced at build time by scripts/stamp_build_version.py
       // with a 10-digit epoch timestamp (e.g. '1786708977').
       //
       // IMPORTANT: We must NOT compare NDU_BUILD against the literal string
-      // '1786950129' to detect the un-stamped source, because the stamp
+      // '1786951943' to detect the un-stamped source, because the stamp
       // script does a naive text.replace() on ALL occurrences — including any
       // literal placeholder in this comparison — which would make the check
       // always-true after stamping and break the cache-busting redirect.
       // Instead, we detect the un-stamped source by checking that the value
       // is a 10-digit epoch timestamp.
-      var NDU_BUILD = '1786950129';
+      var NDU_BUILD = '1786951943';
       if (!NDU_BUILD || !/^\d{10}$/.test(NDU_BUILD)) {
         NDU_BUILD = 'dev-local';
       }
@@ -197,6 +197,39 @@
             location.replace(url.toString());
             return;
           }
+
+          // 5. Fetch version.json (cache-busted via random query param) and
+          //    compare the latest deployed stamp to NDU_BUILD (which is
+          //    embedded in this index.html). If they differ, this index.html
+          //    is STALE — the browser's HTTP cache (max-age=600 on GitHub
+          //    Pages) is serving an old version. Redirect to the new stamp
+          //    so the browser fetches fresh HTML/JS from the origin.
+          //
+          //    This runs ASYNC — it does NOT block page load. If a new
+          //    deploy is detected, the redirect kills the in-progress
+          //    bootstrap. The user sees a brief flash before redirect,
+          //    but always ends up on the latest version.
+          //
+          //    Without this check, users with cached OLD index.html will
+          //    continue to see the OLD app for up to 10 minutes after
+          //    each deploy because the existing redirect logic above
+          //    only redirects to the OLD stamp embedded in OLD index.html.
+          try {
+            fetch('version.json?cb=' + Date.now() + Math.random().toString(36).slice(2), {cache: 'no-cache'})
+              .then(function(r) { return r.ok ? r.json() : null; })
+              .then(function(data) {
+                if (!data || !data.build) return;
+                if (data.build === NDU_BUILD) return; // same — no redirect needed
+                // New deploy detected — redirect with new stamp.
+                var u = new URL(location.href);
+                u.searchParams.set('_ndu', data.build);
+                localStorage.setItem('__ndu_build', data.build);
+                location.replace(u.toString());
+              })
+              .catch(function() { /* network error — ignore, fall through */ });
+          } catch(e) {
+            console.warn('[NDU] version.json fetch error:', e);
+          }
         }
 
         localStorage.setItem('__ndu_build', NDU_BUILD);
@@ -214,6 +247,6 @@
     For more details:
     * https://docs.flutter.dev/platform-integration/web/initialization
   -->
-  <script src="flutter_bootstrap.js?v=1786950129" async></script>
+  <script src="flutter_bootstrap.js?v=1786951943" async></script>
 </body>
 </html>
